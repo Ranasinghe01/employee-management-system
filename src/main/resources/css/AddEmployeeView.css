@@ -1,0 +1,66 @@
+/*.text-field.error {
+    -fx-border-color: red;
+    -fx-text-fill: red;
+}
+
+.radio-button.error {
+    -fx-text-fill: red;
+}
+
+.check-box.error {
+    -fx-text-fill: red;
+}*/
+
+#root {
+    -fx-font-family: Ubuntu;
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-cursor: hand;
+}
+
+#btnNewEmployee {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+
+#btnNewProgram:hover {
+    -fx-background-color: rgba(0, 128, 0, 0.77);
+}
+
+.heading {
+    -fx-font-size: 20px;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: lightgray;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+}
+
+.text-field:hover, .text-field:focused {
+    -fx-border-color: #00c6ff;
+}
+
+.text-field.error {
+    -fx-border-color: red;
+}
+
+.radio-button.error, .check-box.error {
+    -fx-text-fill: red;
+}
+
+.error .radio {
+    -fx-border-color: rgba(255, 0, 0, 0.42) !important;
+    -fx-border-radius: 100%;
+}
+
+.error .box {
+    -fx-border-color: rgba(255, 0, 0, 0.42) !important;
+}
+
+.label.error {
+    -fx-text-fill: red;
+}

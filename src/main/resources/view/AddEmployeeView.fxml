@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="772.0" style="-fx-background-color: white;" stylesheets="@../css/AddEmployeeView.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep12.fx.controls.controller.AddEmployeeViewController">
+   <children>
+      <GridPane fx:id="mainGridPane" layoutX="52.0" layoutY="45.0" prefHeight="256.0" prefWidth="504.0" AnchorPane.bottomAnchor="399.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="216.0" AnchorPane.topAnchor="45.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="112.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="625.0" minWidth="10.0" prefWidth="354.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="8.0" prefHeight="33.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblEmployeeId" prefHeight="18.0" prefWidth="79.0" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNIC" layoutX="138.0" layoutY="53.0" prefHeight="26.0" prefWidth="574.0" promptText="xxxxxxxxxV" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtName" prefHeight="26.0" prefWidth="574.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtAddress" layoutX="249.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="384.0" spacing="30.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <children>
+                  <RadioButton fx:id="rdButtonMale" mnemonicParsing="false" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="rdBtnGroupGender" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdButtonFemale" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Female" toggleGroup="$rdBtnGroupGender" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="96.0" spacing="5.0" GridPane.rowIndex="2">
+               <children>
+                  <Label fx:id="lblName" accessibleText="#txtName" alignment="CENTER_RIGHT" mnemonicParsing="true" prefHeight="18.0" prefWidth="82.0" text="_Full Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="6.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="17.0" text=":">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="30.0" prefHeight="29.0" prefWidth="96.0" spacing="5.0" GridPane.rowIndex="3">
+               <children>
+                  <Label fx:id="lblAddress" accessibleText="#txtAddress" alignment="CENTER_RIGHT" mnemonicParsing="true" prefHeight="18.0" prefWidth="76.0" text="_Address">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="17.0" text=":">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="95.0" prefHeight="29.0" prefWidth="96.0" spacing="5.0" GridPane.rowIndex="4">
+               <children>
+                  <Label fx:id="lblGender" accessibleText="#rdButtonMale" alignment="CENTER_RIGHT" mnemonicParsing="true" prefHeight="18.0" prefWidth="76.0" text="_Gender">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="6.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="17.0" text=":">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="30.0" prefHeight="29.0" prefWidth="96.0" spacing="5.0">
+               <children>
+                  <Label fx:id="lblId" alignment="CENTER_RIGHT" mnemonicParsing="true" prefHeight="18.0" prefWidth="56.0" text="_Id">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="6.0" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="17.0" text=":">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="53.0" prefHeight="29.0" prefWidth="96.0" spacing="5.0" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="lblNIC" accessibleText="#txtNIC" alignment="CENTER_RIGHT" mnemonicParsing="true" prefHeight="18.0" prefWidth="56.0" text="_NIC">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="6.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="17.0" text=":">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <Button fx:id="btnNewEmployee" layoutX="583.0" layoutY="25.0" mnemonicParsing="false" onAction="#btnNewEmployeeOnAction" prefHeight="39.0" prefWidth="162.0" text="+ New Employee">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <HBox layoutX="182.0" layoutY="312.0" prefHeight="31.0" prefWidth="168.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnSaveOrUpdate" defaultButton="true" mnemonicParsing="false" onAction="#btnSaveOrUpdateOnAction" prefHeight="38.0" prefWidth="74.0" text="Save" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="37.0" prefWidth="79.0" text="Delete" />
+         </children>
+      </HBox>
+      <TableView fx:id="tblEmployee" layoutX="59.0" layoutY="374.0" prefHeight="300.0" prefWidth="655.0">
+        <columns>
+          <TableColumn editable="false" prefWidth="76.0" sortable="false" text="ID" />
+          <TableColumn editable="false" prefWidth="112.0" sortable="false" text="NIC" />
+            <TableColumn editable="false" prefWidth="141.0" sortable="false" text="NAME" />
+            <TableColumn editable="false" prefWidth="245.0" sortable="false" text="ADDRESS" />
+            <TableColumn editable="false" prefWidth="78.0" sortable="false" text="GENDER" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
