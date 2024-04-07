@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>lk.ijse.dep12</groupId>
-    <artifactId>employee-management-with-table</artifactId>
+    <artifactId>fx-employee-management-system</artifactId>
     <version>0.1.0</version>
 
     <properties>

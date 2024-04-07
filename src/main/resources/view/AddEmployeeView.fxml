@@ -145,8 +145,8 @@
          </font></Button>
       <HBox layoutX="182.0" layoutY="312.0" prefHeight="31.0" prefWidth="168.0" spacing="20.0">
          <children>
-            <Button fx:id="btnSaveOrUpdate" defaultButton="true" mnemonicParsing="false" onAction="#btnSaveOrUpdateOnAction" prefHeight="38.0" prefWidth="74.0" text="Save" />
-            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="37.0" prefWidth="79.0" text="Delete" />
+            <Button fx:id="btnSave" defaultButton="true" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="38.0" prefWidth="74.0" text="Save" />
+            <Button fx:id="btnDelete" defaultButton="true" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="37.0" prefWidth="79.0" text="Delete" />
          </children>
       </HBox>
       <TableView fx:id="tblEmployee" layoutX="59.0" layoutY="374.0" prefHeight="300.0" prefWidth="655.0">
